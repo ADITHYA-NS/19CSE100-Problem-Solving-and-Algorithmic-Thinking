@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22002"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:56:06 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTExLTA0OzEwOjM1OjAwIEFNOzMwNDU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTExLTA0OzEwOjU2OjA2IEFNOzM7MzE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dividend" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value for dividend:&quot;" newline="True"/>
+            <input variable="dividend"/>
+            <declare name="divisor" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the divisor:&quot;" newline="True"/>
+            <input variable="divisor"/>
+            <declare name="quotient" type="Integer" array="False" size=""/>
+            <comment text="To get the value of quotient"/>
+            <assign variable="quotient" expression="dividend/divisor"/>
+            <declare name="reminder" type="Integer" array="False" size=""/>
+            <comment text="since divident=quotient*divisor+ reminder"/>
+            <assign variable="reminder" expression="dividend-(quotient*divisor)"/>
+            <output expression="&quot;Reminder=&quot;&amp;reminder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
