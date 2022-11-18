@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22002"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:29:23 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTExLTE4OzA5OjA1OjIwIEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTExLTE4OzEwOjI5OjIzIEFNOzEyOzMyMTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="To Withdraw Money From ATM"/>
+            <declare name="AccountNo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the account number:&quot;" newline="True"/>
+            <comment text="To input Account number from user"/>
+            <input variable="AccountNo"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <output expression="&quot;Enter Name:&quot;" newline="True"/>
+            <comment text="To input Name from User"/>
+            <input variable="Name"/>
+            <declare name="Balance" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the balance:&quot;" newline="True"/>
+            <comment text="To input balance from user"/>
+            <input variable="Balance"/>
+            <declare name="Amount" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Amount to withdraw:&quot;" newline="True"/>
+            <comment text="To input Amount to withdraw from user"/>
+            <input variable="Amount"/>
+            <comment text=" If statement used.If the Balance is greater than amount, The user can enter the pin ."/>
+            <if expression="Balance&gt;Amount">
+                <then>
+                    <assign variable="Balance" expression="Balance-Amount"/>
+                    <if expression="Balance&gt;500">
+                        <then>
+                            <declare name="Pin" type="Integer" array="False" size=""/>
+                            <output expression="&quot;Enter Pin:&quot;" newline="True"/>
+                            <input variable="Pin"/>
+                            <comment text="If statement used to check whether the pin entered is corrrect"/>
+                            <if expression="Pin==123456">
+                                <then>
+                                    <output expression="&quot;Withdrwell Successfull&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Withdrawel Failed-Wrong Pin&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Withdrawel Failed-Balance less than minimum balance&quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;Account Number:&quot;&amp;AccountNo" newline="True"/>
+                    <output expression="&quot;Name:&quot;&amp;Name" newline="True"/>
+                    <output expression="&quot;Amount Withdrawed:&quot;&amp;Amount" newline="True"/>
+                    <output expression="&quot;Balance:&quot;&amp;Balance" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;WIthdrawell Failed- Amount greater than balance &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
