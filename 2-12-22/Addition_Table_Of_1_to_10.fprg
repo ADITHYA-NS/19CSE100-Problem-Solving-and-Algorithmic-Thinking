@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22002"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:00:46 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTEyLTAyOzA5OjI2OjA4IEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTEyLTAyOzEwOjAwOjQ2IEFNOzU7MzE1OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to find th addition table from 1 to 10"/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <comment text="Initially sum is zero"/>
+            <assign variable="sum" expression="0"/>
+            <comment text="num1 takes values from 1 to 10 in each iteration."/>
+            <for variable="num1" start="1" end="10" direction="inc" step="1">
+                <comment text="Gives the addition table for each value of num1"/>
+                <output expression="&quot;Addition Table of &quot;&amp;num1" newline="True"/>
+                <comment text="num2 takes values from 1-10"/>
+                <for variable="num2" start="1" end="10" direction="inc" step="1">
+                    <assign variable="sum" expression="num1+num2"/>
+                    <output expression="num1 &amp; &quot;+&quot; &amp; num2 &amp; &quot;=&quot; &amp; sum" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

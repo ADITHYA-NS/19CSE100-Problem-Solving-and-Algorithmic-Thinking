@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22002"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:43:38 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTEyLTAyOzEwOjM0OjMzIEFNOzMwNDk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTEyLTAyOzEwOjQzOjM4IEFNOzE7MzE2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to print the fibonocci series"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number you want:&quot;" newline="True"/>
+            <comment text="to input the value count from user"/>
+            <input variable="count"/>
+            <comment text="initially num and num1 is one"/>
+            <assign variable="num" expression="1"/>
+            <assign variable="num1" expression="1"/>
+            <output expression="num" newline="True"/>
+            <comment text="while loop used to check if count is less than one"/>
+            <while expression="count&gt;1">
+                <output expression="num1" newline="True"/>
+                <assign variable="num1" expression="num+num1"/>
+                <assign variable="num" expression="num1-num"/>
+                <assign variable="count" expression="count-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

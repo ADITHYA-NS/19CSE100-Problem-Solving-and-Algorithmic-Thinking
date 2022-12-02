@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22002"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:05:39 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTEyLTAyOzA5OjI2OjA4IEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDAzOTsyMDIyLTEyLTAyOzEwOjA1OjM5IEFNOzEzOzMyMTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to find th multiplication table from 1 to 10"/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="product" type="Integer" array="False" size=""/>
+            <comment text="Initially productis one"/>
+            <assign variable="product" expression="1"/>
+            <comment text="num1 takes values from 1 to 10 in each iteration."/>
+            <for variable="num1" start="1" end="10" direction="inc" step="1">
+                <comment text="Gives the multiplication table for each value of num1"/>
+                <output expression="&quot;Multiplication Table of &quot;&amp;num1" newline="True"/>
+                <comment text="num2 takes values from 1-10"/>
+                <for variable="num2" start="1" end="10" direction="inc" step="1">
+                    <assign variable="product" expression="num1*num2"/>
+                    <output expression="num1 &amp; &quot;*&quot; &amp; num2 &amp; &quot;=&quot; &amp; product" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
