@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 10:21:28 AM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIyLTEyLTA5OzA5OjEzOjEyIEFNOzIxMDQ="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIyLTEyLTEwOzEwOjIxOjI4IEFNOzM7MjIwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to find the frequencyn of a number in an array"/>
+            <declare name="Array" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="loop to input array"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <declare name="num" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter number:&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="Array[i]" expression="num"/>
+            </for>
+            <declare name="val" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of number whose frequency is to be found:&quot;" newline="True"/>
+            <input variable="val"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <comment text="loop to find the frequency of the number in array"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="Array[i]==val">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Frequency of &quot;&amp;val &amp;&quot;=&quot;&amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

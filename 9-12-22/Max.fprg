@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:58:36 PM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIyLTEyLTA5OzA5OjEzOjEyIEFNOzIxMDQ="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIyLTEyLTA5OzA5OjU4OjM2IFBNOzM7MjI0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Array" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <declare name="num" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter number:&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="Array[i]" expression="num"/>
+            </for>
+            <if expression="Array[0]&gt;Array[1]&amp;&amp; Array[0]&gt;Array[2]&amp;&amp; Array[0]&gt;Array[3]&amp;&amp; Array[0]&gt;Array[4]">
+                <then>
+                    <output expression="Array[0]&amp; &quot; is the largest&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="Array[1]&gt;Array[0]&amp;&amp;Array[1]&gt;Array[2]&amp;&amp;Array[1]&gt;Array[3]&amp;&amp;Array[1]&gt;Array[4]">
+                        <then>
+                            <output expression="Array[1]&amp; &quot; is the largest&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="Array[2]&gt;Array[0]&amp;&amp;Array[2]&gt;Array[1]&amp;&amp;Array[2]&gt;Array[3]&amp;&amp;Array[2]&gt;Array[4]">
+                                <then>
+                                    <output expression="Array[2]&amp; &quot; is the largest&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="Array[3]&gt;Array[0]&amp;&amp;Array[3]&gt;Array[2]&amp;&amp;Array[3]&gt;Array[1]&amp;&amp;Array[3]&gt;Array[4]">
+                                        <then>
+                                            <output expression="Array[3]&amp; &quot; is the largest&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="Array[4]&amp; &quot; is the largest&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
