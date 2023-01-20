@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22002"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 11:11:46 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDEwMjsyMDIzLTAxLTIwOzA5OjA2OjA1IEFNOzMwNDU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwMjsyMDIyMjNNQVlDMDEwMjsyMDIzLTAxLTIwOzExOjExOjQ2IEFNOzg7MzE1NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="To sort an array using bubble sort"/>
+            <declare name="i, j, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of elements:&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="Array" type="Integer" array="True" size="n"/>
+            <comment text="To input Array contents"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter the array conetnts:&quot;" newline="True"/>
+                <input variable="Array[i]"/>
+            </for>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="Initializing minimum value"/>
+                <assign variable="min" expression="Array[i]"/>
+                <for variable="j" start="i" end="n-1" direction="inc" step="1">
+                    <if expression="Array[j]&lt;min">
+                        <then>
+                            <comment text="to swap elements"/>
+                            <assign variable="min" expression="Array[j]"/>
+                            <assign variable="Array[j]" expression="Array[i]"/>
+                            <assign variable="Array[i]" expression="min"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Array Contents&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="Array[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
