@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:11:45 PM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIzLTAxLTI3OzA4OjIwOjUwIFBNOzIxMTc="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIzLTAxLTI3OzA5OjExOjQ1IFBNOzI7MjIzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="A program to find fibanocci series of given steps"/>
+            <declare name="steps, i, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of steps of fiobnacci series is to be found:&quot;" newline="True"/>
+            <comment text="to input the number of steps from user"/>
+            <input variable="steps"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="n" expression="1"/>
+            <call expression="Fibonacci(steps,i,n)"/>
+        </body>
+    </function>
+    <function name="Fibonacci" type="None" variable="fib">
+        <parameters>
+            <parameter name="steps" type="Integer" array="False"/>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <if expression="steps&gt;0">
+                <then>
+                    <output expression="i" newline="True"/>
+                    <assign variable="t" expression="i"/>
+                    <assign variable="i" expression="n"/>
+                    <assign variable="n" expression="n+t"/>
+                    <assign variable="steps" expression="steps-1"/>
+                    <comment text="finding fibonacci series using recursive function"/>
+                    <call expression="Fibonacci(steps,i,n)"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

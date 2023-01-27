@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08:13:20 PM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIzLTAxLTI3OzA4OjA2OjExIFBNOzIxMTg="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIzLTAxLTI3OzA4OjEzOjIwIFBNOzI7MjIyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program is to find the sum of n natural numbers"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number whose sum is to be found:&quot;" newline="True"/>
+            <comment text="to input the value for num from user"/>
+            <input variable="num"/>
+            <comment text="output along with function call"/>
+            <output expression="&quot;Sum of &quot; &amp;num&amp; &quot;natural numbers&quot; &amp;&quot;=&quot;&amp; sum(num)" newline="True"/>
+        </body>
+    </function>
+    <function name="sum" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <comment text="initializing value of sum to be zero"/>
+            <assign variable="sum" expression="0"/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="sum" expression="1"/>
+                </then>
+                <else>
+                    <comment text="finding sum using recursive function"/>
+                    <assign variable="sum" expression="sum(n-1)+n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

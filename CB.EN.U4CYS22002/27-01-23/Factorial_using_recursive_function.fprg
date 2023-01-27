@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08:20:48 PM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIzLTAxLTI3OzA4OjEzOjI5IFBNOzIxMjU="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIzLTAxLTI3OzA4OjIwOjQ4IFBNOzI7MjIzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Program to find the factorial of a number using recursive function"/>
+            <declare name="num, fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number whose factorial is to be found:&quot;" newline="True"/>
+            <comment text="Asking the user to input value whose factorial is to be found"/>
+            <input variable="num"/>
+            <comment text="Calling the function by assigning it to a variable"/>
+            <assign variable="fact" expression="Factorial(num)"/>
+            <output expression="&quot;Factorial of &quot; &amp;num&amp; &quot;=&quot; &amp;fact" newline="True"/>
+        </body>
+    </function>
+    <function name="Factorial" type="Integer" variable="Fact">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Fact" type="Integer" array="False" size=""/>
+            <assign variable="Fact" expression="1"/>
+            <comment text="checking if number is equal to one"/>
+            <if expression="num==1">
+                <then>
+                    <assign variable="Fact" expression="1"/>
+                </then>
+                <else>
+                    <comment text="finding factorial using recursive function"/>
+                    <assign variable="Fact" expression="Factorial(num-1)*num"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
